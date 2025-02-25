@@ -18,6 +18,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
+
 document.querySelectorAll('.tech-icon').forEach(icon => {
     icon.addEventListener('mouseover', function() {
       this.style.transform = 'scale(1.2)';
