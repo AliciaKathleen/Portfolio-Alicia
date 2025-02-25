@@ -1,0 +1,68 @@
+*{
+    font-family: "Schibsted Grotesk", serif;
+}
+
+.skill-bar {
+    width: 0;
+    transition: width 2s ease-in-out;
+}
+
+
+.floating-circle {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.tech-card {
+    transition: all 0.3s ease;
+    background: rgba(34, 34, 34, 0.8);
+    backdrop-filter: blur(10px);
+}
+.tech-card:hover {
+    transform: translateY(-5px);
+    background: rgba(34, 34, 34, 0.9);
+}
+.experience-item {
+    border-left: 2px solid #00ff9d;
+    padding-left: 2rem;
+    position: relative;
+}
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background: #00ff9d;
+    border-radius: 50%;
+}
+.portfolio-card {
+    transition: all 0.3s ease;
+    background: rgba(34, 34, 34, 0.8);
+    backdrop-filter: blur(10px);
+}
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.1);
+}
+.tech-icon {
+    transition: all 0.3s ease;
+}
+.tech-icon:hover {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
