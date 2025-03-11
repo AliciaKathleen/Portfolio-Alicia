@@ -53,3 +53,29 @@ document.querySelectorAll('.tech-icon').forEach(icon => {
   const skillsSection = document.getElementById('skills');
   obs.observe(skillsSection);
   
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const menuOverlay = document.querySelector('.menu-overlay');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+  function toggleMenu() {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    document.body.classList.toggle('overflow-hidden');
+  }
+
+  hamburger.addEventListener('click', toggleMenu);
+  menuOverlay.addEventListener('click', toggleMenu);
+
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      toggleMenu();
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+      toggleMenu();
+    }
+  });

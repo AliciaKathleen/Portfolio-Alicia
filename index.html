@@ -47,28 +47,34 @@
           <span class="text-white">ALÍCIA KATHLEEN</span>
           <span class="block text-sm text-gray-400">DEV</span>
         </div>
-        <div class="space-x-6">
-          <a
-            href="#home"
-            class="text-[#00ff9d] hover:opacity-80 transition-opacity"
-            >HOME</a
-          >
-          <a href="#experience" class="hover:text-[#00ff9d] transition-colors"
-            >SOBRE</a
-          >
-          <a href="#about" class="hover:text-[#00ff9d] transition-colors"
-            >EXPERIÊNCIA</a
-          >
-          <a href="#technology" class="hover:text-[#00ff9d] transition-colors"
-            >TECNOLOGIAS</a
-          >
-          <a href="#portfolio" class="hover:text-[#00ff9d] transition-colors"
-            >PROJETOS</a
-          >
-          <a href="#portfolio" class="hover:text-[#00ff9d] transition-colors"
-            >CONTATO</a
-          >
+        <div class="hidden md:flex space-x-6">
+          <a href="#home" class="text-[#00ff9d] hover:opacity-80 transition-opacity">HOME</a>
+          <a href="#experience" class="hover:text-[#00ff9d] transition-colors">SOBRE</a>
+          <a href="#about" class="hover:text-[#00ff9d] transition-colors">EXPERIÊNCIA</a>
+          <a href="#technology" class="hover:text-[#00ff9d] transition-colors">TECNOLOGIAS</a>
+          <a href="#portfolio" class="hover:text-[#00ff9d] transition-colors">PROJETOS</a>
+          <a href="#contact" class="hover:text-[#00ff9d] transition-colors">CONTATO</a>
         </div>
+    
+        <button class="hamburger md:hidden flex flex-col justify-center items-center w-8 h-8" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <div class="mobile-menu">
+          <div class="p-6 flex flex-col space-y-4">
+            <a href="#home" class="text-[#00ff9d] hover:opacity-80 transition-opacity">HOME</a>
+            <a href="#experience" class="hover:text-[#00ff9d] transition-colors">SOBRE</a>
+            <a href="#about" class="hover:text-[#00ff9d] transition-colors">EXPERIÊNCIA</a>
+            <a href="#technology" class="hover:text-[#00ff9d] transition-colors">TECNOLOGIAS</a>
+            <a href="#portfolio" class="hover:text-[#00ff9d] transition-colors">PROJETOS</a>
+            <a href="#contact" class="hover:text-[#00ff9d] transition-colors">CONTATO</a>
+          </div>
+        </div>
+    
+        <div class="menu-overlay"></div>
+      </nav>
       </nav>
 
       <section id="home" class="mb-32 fade-in">
@@ -202,8 +208,7 @@
                     </div>
                     <p class="text-[#00ff9d] text-sm mb-2">UniCesumar</p>
                     <p class="text-gray-400 text-sm">
-                      Cursando bacharelado em Engenharia de Software, com foco
-                      em desenvolvimento web e metodologias ágeis.
+                      Cursando bacharelado em Engenharia de Software.
                     </p>
                   </div>
 
@@ -211,17 +216,16 @@
                     class="tech-card p-6 rounded-xl border border-gray-800 hover:border-[#00ff9d] transition-all"
                   >
                     <div class="flex items-start justify-between">
-                      <h4 class="font-bold mb-2 text-lg">Informática</h4>
+                      <h4 class="font-bold mb-2 text-lg">Backend</h4>
                       <div
                         class="px-3 py-1 bg-[#00ff9d]/10 rounded-full text-[#00ff9d] text-xs"
                       >
-                        2023
+                      Em andamento
                       </div>
                     </div>
-                    <p class="text-[#00ff9d] text-sm mb-2">Senai</p>
+                    <p class="text-[#00ff9d] text-sm mb-2">Oracle Next Education</p>
                     <p class="text-gray-400 text-sm">
-                      Curso completo abrangendo tecnologias front-end e back-end
-                      modernas.
+                      aprimorando minhas habilidades em desenvolvimento Backend por meio da trilha de aprendizado Oracle Next Education.
                     </p>
                   </div>
                 </div>
@@ -236,8 +240,7 @@
                     <h3 class="text-xl font-bold mb-2">Freelancer</h3>
                     <p class="text-[#00ff9d] mb-4">Desenvolvimento web</p>
                     <p class="text-gray-400">
-                      Criação e otimização de funcionalidades para proporcionar
-                      soluções eficientes e personalizadas aos clientes.
+                      Criação de sites funcionais e implementação de soluções otimizadas, visando atender às demandas e expectativas de clientes de diferentes segmentos.
                     </p>
                     <div class="flex gap-2 mt-4">
                       <img
@@ -397,7 +400,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="portfolio-card rounded-lg overflow-hidden fade-in">
             <img
-              src="imgs/portfolio.png"
+            src="imgs/portfolio.png"
               alt="Project 1"
               class="w-full h-48 object-cover"
             />
@@ -409,7 +412,7 @@
 
           <div class="portfolio-card rounded-lg overflow-hidden fade-in">
             <img
-              src="imgs/portfolio.png"
+            src="imgs/portfolio.png"
               alt="Project 2"
               class="w-full h-48 object-cover"
             />
